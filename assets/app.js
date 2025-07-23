@@ -21,3 +21,20 @@ menu.addEventListener('click',() => {
 close.addEventListener('click',() => {
     menuShow.classList.toggle('hidden','slide-out'); 
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    let faq = document.getElementById('faq').children;
+    for(let i=0; i<faq.length; i++){
+        if(faq[i].tagName == 'DD') {
+            faq[i].style.backgroundColor = 'blue';
+        }
+    }
+    let faqList = document.getElementById('faq');
+    const descriptionList = document.querySelectorAll(".faqTitle");
+    descriptionList.forEach(node => {
+        node.addEventListener('click', () => {
+            node.nextElementSibling.classList.toggle('hidden');
+            
+  })
+})
+})
