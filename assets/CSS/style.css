@@ -12,15 +12,30 @@
         --white: #fff;
         --blue: #2c4964;
         --lightBlue: #1977CC;
+        --shadowBlue: #c1d7ea;
         --titleFont: "Poppins", sans-serif;
         --bodyFont: "Roboto", sans-serif;
-        --gray: #ddd;
+        --gray: #d1cece;
+        --lighterBlue:#F1F7FC;
+        --grayTransparent:  rgba(255, 255, 255, 0.1);
     }
     h1,h2,h3,h4,h5,h6{
-        @apply --titleFont text-blue;
+        font-family: var(--titleFont);
+        @apply text-blue;
     }
     body{
-        @apply --bodyFont bg-white;
+        font-family: var(--bodyFont);
+        @apply bg-white;
+    }
+     .slide-in {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+    }
+    .slide-out {
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
     }
     
 }
